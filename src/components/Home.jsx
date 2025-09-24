@@ -1,6 +1,80 @@
 import { Calendar, ChevronRight, Trophy, User, Users } from "lucide-react";
+import Chart from "chart.js/auto";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
+  const canvasVisitsRef = useRef(null);
+  const chartVisitsRef = useRef(null);
+
+  const canvasSubscriptionsRef = useRef(null);
+  const chartSubscriptionsRef = useRef(null);
+
+  useEffect(() => {
+    if (canvasVisitsRef.current) {
+      if (chartVisitsRef.current) {
+        chartVisitsRef.current.destroy();
+      }
+    }
+    if (canvasSubscriptionsRef.current) {
+      if (chartSubscriptionsRef.current) {
+        chartSubscriptionsRef.current.destroy();
+      }
+    }
+
+    (async function () {
+      const data = [
+        { month: "JAN", visits: 2691, subscriptions: 351 },
+        { month: "FEV", visits: 2985, subscriptions: 325 },
+        { month: "MAR", visits: 2723, subscriptions: 355 },
+        { month: "ABR", visits: 2901, subscriptions: 347 },
+        { month: "MAI", visits: 3015, subscriptions: 304 },
+        { month: "JUN", visits: 3232, subscriptions: 367 },
+        { month: "JUL", visits: 3710, subscriptions: 351 },
+      ];
+
+      chartVisitsRef.current = new Chart(canvasVisitsRef.current, {
+        type: "line",
+        data: {
+          borderColor: "red",
+          labels: data.map((row) => row.month),
+          datasets: [
+            {
+              label: "Total de Visitas por Mês (2025)",
+              data: data.map((row) => row.visits),
+            },
+          ],
+        },
+      });
+
+      chartSubscriptionsRef.current = new Chart(
+        canvasSubscriptionsRef.current,
+        {
+          type: "line",
+          data: {
+            borderColor: "red",
+            labels: data.map((row) => row.month),
+            datasets: [
+              {
+                label: "Total de Inscrições por Mês (2025)",
+                data: data.map((row) => row.subscriptions),
+                borderColor: "red",
+              },
+            ],
+          },
+        }
+      );
+    })();
+
+    return () => {
+      if (chartVisitsRef.current) {
+        chartVisitsRef.current.destroy();
+      }
+      if (chartSubscriptionsRef.current) {
+        chartSubscriptionsRef.current.destroy();
+      }
+    };
+  }, []);
+
   return (
     <section className="flex flex-col gap-15">
       <h1 className="text-4xl font-semibold">Visão Geral</h1>
@@ -19,6 +93,15 @@ export default function Home() {
         <div className="p-10 rounded-lg bg-white flex flex-col gap-2 shadow-md">
           <p className="text-[#555555]">Total de Visitantes</p>
           <h1 className="text-4xl font-semibold">1500</h1>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-2 gap-15">
+        <div>
+          <canvas ref={canvasVisitsRef}></canvas>
+        </div>
+        <div>
+          <canvas ref={canvasSubscriptionsRef}></canvas>
         </div>
       </div>
       {/* ------------------------------------------- */}
