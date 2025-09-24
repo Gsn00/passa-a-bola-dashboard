@@ -1,5 +1,12 @@
+import Navbar from "./components/Navbar";
+
 function App() {
-  return <h1>Hello World!</h1>;
+  return (
+    <section className="flex text-[#242424]">
+      <Navbar />
+      <div className="p-10 flex flex-col gap-5"></div>
+    </section>
+  );
 }
 
 export default App;
