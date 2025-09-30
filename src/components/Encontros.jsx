@@ -1,15 +1,16 @@
 import { Eye, Pencil, Plus, Trash2, Users } from "lucide-react";
 import SearchBar from "./SearchBar";
+import Button from "./Button";
 
 export default function Encontros() {
   return (
     <section className="flex flex-col gap-10">
       <div className="flex justify-between">
-        <h1 className="text-4xl font-semibold">Encontros</h1>
+        <h1 className="text-4xl font-semibold">Gerenciar Encontros</h1>
 
-        <button className="py-3 px-4 flex gap-2 text-white bg-[#690a6c] rounded-lg shadow-lg cursor-pointer items-center">
+        <Button>
           <Plus /> Criar Novo Encontro
-        </button>
+        </Button>
       </div>
 
       <SearchBar placeholder="Buscar encontros por nome, local..." />

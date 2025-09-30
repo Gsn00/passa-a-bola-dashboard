@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Encontros from "./components/Encontros";
 import Navbar from "./components/Navbar";
 import Peneiras from "./components/Peneiras";
+import Copa from "./components/Copa";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/encontros" element={<Encontros />} />
           <Route path="/peneiras" element={<Peneiras />} />
+          <Route path="/copa" element={<Copa />} />
         </Routes>
       </div>
     </section>

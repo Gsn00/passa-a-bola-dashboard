@@ -9,20 +9,22 @@ import {
   Users,
 } from "lucide-react";
 import SearchBar from "./SearchBar";
+import Button from "./Button";
+import TransparentButton from "./TransparentButton";
 
 export default function Peneiras() {
   return (
     <section className="flex flex-col gap-10">
       <div className="flex justify-between">
-        <h1 className="text-4xl font-semibold">Peneiras</h1>
+        <h1 className="text-4xl font-semibold">Gerenciar Peneiras</h1>
 
         <div className="flex gap-5">
-          <button className="py-1 px-4 flex gap-2 text-[#690a6c] border-2 border-[#690a6c] rounded-lg shadow-lg cursor-pointer items-center">
+          <TransparentButton>
             <Pencil /> Editar Formulário
-          </button>
-          <button className="py-3 px-4 flex gap-2 text-white bg-[#690a6c] rounded-lg shadow-lg cursor-pointer items-center">
+          </TransparentButton>
+          <Button>
             <ToggleRight /> Ativar Inscrições
-          </button>
+          </Button>
         </div>
       </div>
 
