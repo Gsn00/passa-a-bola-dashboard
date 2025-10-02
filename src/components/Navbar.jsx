@@ -5,9 +5,9 @@ import {
   Trophy,
   BookOpen,
   Info,
-  User,
   ChevronRight,
   LogOut,
+  UserCog,
 } from "lucide-react";
 import { NavLink } from "react-router";
 
@@ -86,14 +86,14 @@ export default function Navbar() {
               <ChevronRight className="ml-auto" size={22} strokeWidth={1.8} />
             </NavLink>
             <NavLink
-              to="/minhaconta"
+              to="/usuarios"
               className={({ isActive }) =>
                 `flex items-center gap-2 w-full cursor-pointer px-4 py-2 rounded-lg hover:bg-[#7f1b8b] hover:text-white transition-discrete transition duration-300 ease-in-out ${
                   isActive ? "bg-[#690a6c] text-white" : ""
                 }`
               }
             >
-              <User size={22} strokeWidth={1.8} /> Minha Conta{" "}
+              <UserCog size={22} strokeWidth={1.8} /> Usuários{" "}
               <ChevronRight className="ml-auto" size={22} strokeWidth={1.8} />
             </NavLink>
           </div>

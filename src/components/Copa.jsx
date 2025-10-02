@@ -2,7 +2,7 @@ import Button from "./Button";
 import TransparentButton from "./TransparentButton";
 import Input from "./Input";
 import Toggle from "./Toggle";
-import { GitBranch, Users, Wallpaper } from "lucide-react";
+import { GitBranch, Save, Users, Wallpaper } from "lucide-react";
 import PerguntasFrequentes from "./PerguntasFrequentes";
 
 export default function Copa() {
@@ -39,7 +39,9 @@ export default function Copa() {
             value="Estádio Municipal"
           />
 
-          <Button className="ml-auto">Salvar Alterações</Button>
+          <Button className="ml-auto">
+            <Save /> Salvar Alterações
+          </Button>
         </div>
 
         <div className="flex flex-col gap-5 w-1/3 p-7 rounded-lg border border-[#ccc]">
@@ -57,7 +59,7 @@ export default function Copa() {
         </div>
       </div>
 
-      <PerguntasFrequentes className="" />
+      <PerguntasFrequentes />
     </section>
   );
 }

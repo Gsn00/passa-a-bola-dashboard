@@ -11,6 +11,7 @@ import {
 import SearchBar from "./SearchBar";
 import Button from "./Button";
 import TransparentButton from "./TransparentButton";
+import PerguntasFrequentes from "./PerguntasFrequentes";
 
 export default function Peneiras() {
   return (
@@ -218,6 +219,8 @@ export default function Peneiras() {
           </div>
         </div>
       </div>
+
+      <PerguntasFrequentes />
     </section>
   );
 }
