@@ -63,11 +63,8 @@ export default function MobileMenu() {
                 href={item.href}
                 className="py-4 text-lg text-gray-700 border-b border-gray-100 hover:text-purple-700 active:pl-2 transition-all"
                 onClick={(e) => {
-                  e.preventDefault();
                   const url = e.currentTarget.getAttribute("href");
-                  setTimeout(() => {
-                    window.location.href = url;
-                  }, 400);
+                  window.location.href = url;
                 }}
               >
                 {item.label}

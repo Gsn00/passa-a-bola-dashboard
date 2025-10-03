@@ -2,19 +2,18 @@ import Button from "./Button";
 import TransparentButton from "./TransparentButton";
 import Input from "./Input";
 import Toggle from "./Toggle";
-import { GitBranch, Save, Users, Wallpaper } from "lucide-react";
+import { GitBranch, Save, ToggleRight, Users, Wallpaper } from "lucide-react";
 import PerguntasFrequentes from "./PerguntasFrequentes";
 
 export default function Copa() {
   return (
     <section className="flex flex-col gap-10">
-      <div className="flex flex-col lg:flex-rowjustify-between gap-5">
+      <div className="flex flex-col lg:flex-row justify-between gap-5">
         <h1 className="text-4xl font-semibold">Gerenciar Copa</h1>
 
-        <div className="flex items-center gap-5">
-          <p>Ativar/Desativar Página da Copa</p>
-          <Toggle />
-        </div>
+        <Button>
+          <ToggleRight /> Ativar/Desativar Copa
+        </Button>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-10">
@@ -30,7 +29,7 @@ export default function Copa() {
             defaultValue="Copa do Passa a Bola 2025"
           />
 
-          <Input title="Data" type="date" value="2025-12-15" />
+          <Input title="Data" type="date" defaultValue="2025-12-15" />
 
           <Input
             title="Local"

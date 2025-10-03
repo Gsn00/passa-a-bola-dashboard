@@ -24,7 +24,7 @@ export default function Peneiras() {
             <Pencil /> Editar Formulário
           </TransparentButton>
           <Button>
-            <ToggleRight /> Ativar Inscrições
+            <ToggleRight /> Ativar/Desativar Inscrições
           </Button>
         </div>
       </div>
