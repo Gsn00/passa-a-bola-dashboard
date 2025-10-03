@@ -18,7 +18,7 @@ export default function Encontros() {
 
       <SearchBar placeholder="Buscar encontros por nome, local..." />
 
-      <div className="flex flex-col md:flex-row gap-2 border border-[#ccc] rounded-lg p-4">
+      <div className="flex flex-col md:flex-row gap-2">
         <button className="py-2 px-4 rounded-lg cursor-pointer font-semibold text-[#690a6c] bg-[#e1cee2]">
           Todos
         </button>
