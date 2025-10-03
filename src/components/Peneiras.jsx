@@ -186,7 +186,7 @@ export default function Peneiras() {
             </table>
           </div>
 
-          <div className="flex md:hidden flex-col gap-5 border border-[#ccc] rounded-lg p-4">
+          <div className="flex md:hidden flex-col gap-5">
             <div className="w-full flex flex-col gap-3 rounded-lg bg-white shadow-lg p-6 text-sm">
               <div className="flex justify-between">
                 <h3 className="pr-10 font-semibold">NOME</h3>
