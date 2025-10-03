@@ -8,12 +8,14 @@ import Historia from "./components/Historia";
 import Sobre from "./components/Sobre";
 import Usuarios from "./components/Usuarios";
 import MobileMenu from "./components/MobileMenu";
+import DevPopup from "./components/DevPopup";
 
 function App() {
   return (
     <section className="flex flex-col xl:flex-row text-[#242424]">
       <Navbar />
       <MobileMenu />
+      <DevPopup />
       <div className="p-8 lg:p-15 flex flex-col gap-5 w-full h-full">
         <Routes>
           <Route path="/" element={<Home />} />
