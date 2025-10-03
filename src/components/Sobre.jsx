@@ -7,7 +7,7 @@ export default function Sobre() {
   return (
     <section className="flex flex-col gap-10">
       <div className="flex justify-between">
-        <h1 className="text-4xl font-semibold">Gerenciar Sobre</h1>
+        <h1 className="text-2xl md:text-4xl font-semibold">Gerenciar Sobre</h1>
       </div>
 
       <div className="flex flex-col gap-4">

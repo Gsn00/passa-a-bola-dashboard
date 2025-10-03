@@ -17,7 +17,9 @@ export default function Peneiras() {
   return (
     <section className="flex flex-col gap-10">
       <div className="flex flex-col md:flex-row gap-5 justify-between">
-        <h1 className="text-4xl font-semibold">Gerenciar Peneiras</h1>
+        <h1 className="text-2xl md:text-4xl font-semibold">
+          Gerenciar Peneiras
+        </h1>
 
         <div className="flex flex-col md:flex-row gap-5">
           <TransparentButton>

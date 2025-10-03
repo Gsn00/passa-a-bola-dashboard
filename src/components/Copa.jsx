@@ -9,7 +9,7 @@ export default function Copa() {
   return (
     <section className="flex flex-col gap-10">
       <div className="flex flex-col lg:flex-row justify-between gap-5">
-        <h1 className="text-4xl font-semibold">Gerenciar Copa</h1>
+        <h1 className="text-2xl md:text-4xl font-semibold">Gerenciar Copa</h1>
 
         <Button>
           <ToggleRight /> Ativar/Desativar Copa
