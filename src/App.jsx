@@ -7,12 +7,14 @@ import Copa from "./components/Copa";
 import Historia from "./components/Historia";
 import Sobre from "./components/Sobre";
 import Usuarios from "./components/Usuarios";
+import MobileMenu from "./components/MobileMenu";
 
 function App() {
   return (
-    <section className="flex text-[#242424]">
+    <section className="flex flex-col xl:flex-row text-[#242424]">
       <Navbar />
-      <div className="p-15 flex flex-col gap-5 w-full h-full">
+      <MobileMenu />
+      <div className="p-8 lg:p-15 flex flex-col gap-5 w-full h-full">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/encontros" element={<Encontros />} />

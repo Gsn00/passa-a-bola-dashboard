@@ -6,7 +6,7 @@ import CardHistoria from "./CardHistoria";
 export default function Historia() {
   return (
     <section className="flex flex-col gap-10">
-      <div className="flex justify-between">
+      <div className="flex flex-col lg:flex-row justify-between gap-5">
         <h1 className="text-4xl font-semibold">Gerenciar História</h1>
 
         <Button>
@@ -16,7 +16,7 @@ export default function Historia() {
 
       <SearchBar placeholder="Buscar histórias por título, ano..." />
 
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 2xl:grid-cols-2 gap-5">
         <CardHistoria
           href="/historia/historia01"
           src="/images/historia-01.png"

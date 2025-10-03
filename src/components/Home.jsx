@@ -44,6 +44,10 @@ export default function Home() {
             },
           ],
         },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+        },
       });
 
       chartSubscriptionsRef.current = new Chart(
@@ -61,6 +65,10 @@ export default function Home() {
               },
             ],
           },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+          },
         }
       );
     })();
@@ -76,10 +84,10 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="flex flex-col gap-15">
+    <section className="flex flex-col gap-15 max-md:text-sm">
       <h1 className="text-4xl font-semibold">Visão Geral</h1>
       {/* ------------------------------------------- */}
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
         <div className="p-10 rounded-lg bg-white flex flex-col gap-2 shadow-md">
           <p className="text-[#555555]">Total de Encontros</p>
           <h1 className="text-4xl font-semibold">19</h1>
@@ -96,11 +104,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-15">
-        <div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-15">
+        <div className="h-[200px] sm:h-[300px]">
           <canvas ref={canvasVisitsRef}></canvas>
         </div>
-        <div>
+        <div className="h-[200px] sm:h-[300px]">
           <canvas ref={canvasSubscriptionsRef}></canvas>
         </div>
       </div>
@@ -108,7 +116,7 @@ export default function Home() {
       <div className="flex flex-col gap-5">
         <h2 className="text-2xl font-semibold">Acesso Rápido</h2>
 
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
           <button className="flex items-center gap-5 py-5 px-10 rounded-lg shadow-md bg-white cursor-pointer">
             <Calendar size={22} strokeWidth={1.8} color="#690a6c" />
             Gerenciar Encontros

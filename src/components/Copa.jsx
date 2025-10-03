@@ -8,7 +8,7 @@ import PerguntasFrequentes from "./PerguntasFrequentes";
 export default function Copa() {
   return (
     <section className="flex flex-col gap-10">
-      <div className="flex justify-between">
+      <div className="flex flex-col lg:flex-rowjustify-between gap-5">
         <h1 className="text-4xl font-semibold">Gerenciar Copa</h1>
 
         <div className="flex items-center gap-5">
@@ -17,8 +17,8 @@ export default function Copa() {
         </div>
       </div>
 
-      <div className="flex gap-10">
-        <div className="flex flex-col gap-5 w-2/3 p-7 rounded-lg border border-[#ccc]">
+      <div className="flex flex-col lg:flex-row gap-10">
+        <div className="flex flex-col gap-5 lg:w-2/3 p-7 rounded-lg border border-[#ccc]">
           <h2 className="text-2xl font-semibold">
             Informações Gerais do Evento
           </h2>
@@ -27,7 +27,7 @@ export default function Copa() {
             title="Nome do Evento"
             type="text"
             placeholder="Digite o nome do evento..."
-            value="Copa do Passa a Bola 2025"
+            defaultValue="Copa do Passa a Bola 2025"
           />
 
           <Input title="Data" type="date" value="2025-12-15" />
@@ -36,7 +36,7 @@ export default function Copa() {
             title="Local"
             type="text"
             placeholder="Digite o local do evento..."
-            value="Estádio Municipal"
+            defaultValue="Estádio Municipal"
           />
 
           <Button className="ml-auto">
@@ -44,7 +44,7 @@ export default function Copa() {
           </Button>
         </div>
 
-        <div className="flex flex-col gap-5 w-1/3 p-7 rounded-lg border border-[#ccc]">
+        <div className="flex flex-col gap-5 lg:w-1/3 p-7 rounded-lg border border-[#ccc]">
           <h2 className="text-2xl font-semibold">Gerenciamento</h2>
 
           <TransparentButton className="w-full">

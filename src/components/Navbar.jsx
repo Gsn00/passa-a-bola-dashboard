@@ -13,7 +13,7 @@ import { NavLink } from "react-router";
 
 export default function Navbar() {
   return (
-    <section className="min-w-[300px]">
+    <section className="hidden xl:flex min-w-[300px]">
       <nav className="w-[300px] h-[100vh] px-6 py-5 border-r border-[#e1cee2] flex flex-col fixed">
         <h2 className="font-bold text-xl mb-2">Painel de Controle</h2>
         <p className="font-normal text-[#555555]">Administrador</p>

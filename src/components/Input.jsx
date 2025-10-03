@@ -6,8 +6,6 @@ export default function Input(props) {
         type={props.type || "text"}
         placeholder={props.placeholder || ""}
         className="w-full border border-[#ccc] bg-white py-3 px-5 outline-0 rounded-lg font-semibold"
-        value={props.value}
-        onChange={props.onChange}
         {...props}
       />
     </div>

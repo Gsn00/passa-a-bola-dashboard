@@ -7,7 +7,7 @@ export default function SearchBar(props) {
         <Search color="#757575" />
       </div>
       <input
-        className="border-r border-t border-b border-[#ccc] w-full py-4 pr-4 outline-0 rounded-tr-lg rounded-br-lg font-semibold"
+        className="border-r border-t border-b border-[#ccc] w-full py-4 pr-4 outline-0 rounded-tr-lg rounded-br-lg font-semibold text-sm md:text-base"
         type="text"
         placeholder={props.placeholder}
       />
