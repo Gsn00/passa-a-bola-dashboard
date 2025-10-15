@@ -6,9 +6,9 @@
 - Marcielle Janguas Pina Carvalho – RM 561505
 - Marcos Vinicius Aquino Prado – RM 562775
 
-#Sprint 4
+# Sprint 4
 
-##Front-End
+## Front-End
 - TailwindCSS foi usado em todo o projeto.
 - Display Grid foi usado em diversos componentes e páginas.
 - Um modal foi adicionado ao clicar em algum botão da página, avisando que a funcionalidade está em desenvolvimento.
@@ -16,6 +16,6 @@
 - Deploy com vercel.
 - Site 100% responsivo.
 
-##Web Development
+## Web Development
 - Criação de eventos: ao clicar em algum botão dentro das páginas irá abrir um modal avisando que a funcionalidade está em desenvolvimento e o mesmo ficará amostra por alguns segundos.
 - Manipulação de elementos como input e textarea...
